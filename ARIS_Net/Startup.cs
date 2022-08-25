@@ -26,6 +26,15 @@ namespace ARIS_Net
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CrossOriginResourceSharingPolicy",
+                            builder => builder.WithOrigins(
+                                new string[] { "*" })
+                                .AllowAnyHeader()
+                                .AllowAnyMethod()
+                            );
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -37,14 +46,20 @@ namespace ARIS_Net
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            var MyAllowSpecificOrigins = "CrossOriginResourceSharingPolicy";
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ARIS_Net v1"));
+                
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ARIS_Net v1"));
+
             app.UseHttpsRedirection();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseRouting();
 
