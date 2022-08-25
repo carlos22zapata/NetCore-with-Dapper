@@ -6,10 +6,25 @@ C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\ARIS_Net.runtimeco
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\ARIS_Net.runtimeconfig.dev.json
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\ARIS_Net.dll
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\ARIS_Net.pdb
+<<<<<<< HEAD
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+=======
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Dapper.dll
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\System.Data.SqlClient.dll
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\runtimes\win-x64\native\sni.dll
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+>>>>>>> 4458e1dcaa32e8f8e17aa9311392ae9e1961e8a3
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\obj\Debug\net5.0\ARIS_Net.csproj.AssemblyReference.cache
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\obj\Debug\net5.0\ARIS_Net.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\obj\Debug\net5.0\ARIS_Net.AssemblyInfoInputs.cache
@@ -26,6 +41,7 @@ C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\obj\Debug\net5.0\refint\ARIS_Net.dl
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\obj\Debug\net5.0\ARIS_Net.pdb
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\obj\Debug\net5.0\ARIS_Net.genruntimeconfig.cache
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\obj\Debug\net5.0\ref\ARIS_Net.dll
+<<<<<<< HEAD
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Dapper.dll
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\System.Data.SqlClient.dll
@@ -34,3 +50,5 @@ C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\runtimes\win-x64\n
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\runtimes\win-x86\native\sni.dll
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\MyHP\source\repos\ARIS_Net\ARIS_Net\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+=======
+>>>>>>> 4458e1dcaa32e8f8e17aa9311392ae9e1961e8a3

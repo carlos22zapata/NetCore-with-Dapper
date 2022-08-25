@@ -51,19 +51,25 @@ namespace ARIS_Net.Controllers
                 {
                     return BadRequest("Hubo un error en la linea de comandos indicada al motor de base de datos, excepción: " + ex.Message);
                 }
+<<<<<<< HEAD
 
 
                 //return Json(result);    
                 return null;
+=======
+>>>>>>> 4458e1dcaa32e8f8e17aa9311392ae9e1961e8a3
             }
             
             return null;
         }
 
+<<<<<<< HEAD
         internal SqlConnection Connex(string ConnectionString)
         {
 
             return null;
         }
+=======
+>>>>>>> 4458e1dcaa32e8f8e17aa9311392ae9e1961e8a3
     }
 }
