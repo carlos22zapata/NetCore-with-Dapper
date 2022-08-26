@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MyHP\\source\\repos\\ARIS_Net\\ARIS_Net\\ARIS_Net.csproj": {}
+    "C:\\Users\\MyHP\\source\\repos\\Aris_Net\\ARIS_Net\\ARIS_Net.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MyHP\\source\\repos\\ARIS_Net\\ARIS_Net\\ARIS_Net.csproj": {
+    "C:\\Users\\MyHP\\source\\repos\\Aris_Net\\ARIS_Net\\ARIS_Net.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MyHP\\source\\repos\\ARIS_Net\\ARIS_Net\\ARIS_Net.csproj",
+        "projectUniqueName": "C:\\Users\\MyHP\\source\\repos\\Aris_Net\\ARIS_Net\\ARIS_Net.csproj",
         "projectName": "ARIS_Net",
-        "projectPath": "C:\\Users\\MyHP\\source\\repos\\ARIS_Net\\ARIS_Net\\ARIS_Net.csproj",
+        "projectPath": "C:\\Users\\MyHP\\source\\repos\\Aris_Net\\ARIS_Net\\ARIS_Net.csproj",
         "packagesPath": "C:\\Users\\MyHP\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\MyHP\\source\\repos\\Aris_Net\\ARIS_Net\\obj\\",
         "projectStyle": "PackageReference",

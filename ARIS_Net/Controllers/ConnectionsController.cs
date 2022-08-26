@@ -3,13 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
+using static ARIS_Net.Tools;
 
 namespace ARIS_Net.Controllers
 {
@@ -99,43 +98,42 @@ namespace ARIS_Net.Controllers
                 }
             }
 
-            
-            
             return null;
         }
 
-        public static String Decrypt(String encryptedText, String key, String iv)
+        [HttpPost]
+        [Route("CreateCsv")]
+        public object CreateCsv(string path)
         {
-            var encryptedBytes = Convert.FromBase64String(encryptedText);
-            var aes = GetAES(key);
-            aes.IV = Convert.FromBase64String(iv);
-            return Encoding.UTF8.GetString(Decrypt(encryptedBytes, aes));
+            path = @"C:\Users\MyHP\Desktop\Prueba.csv";
+
+            try
+            {
+                string Content = "";
+                using (StreamReader srr = System.IO.File.OpenText(path))
+                {
+                    string s = "";
+                    int line = 0;
+                    while((s = srr.ReadLine()) !=null)
+                    {
+                        Content += ((line == 0 ? "{\"Head\":" : "\"Line" + line.ToString() + "\":") + "\"" + s + "\",");
+                        line++;
+                    }
+                }
+
+                Content = Content.Substring(0, Content.Length - 1) + "}";
+
+                return Content; //"{" + Content.Replace(';',',') + "}"; //JsonConvert.SerializeObject(Content, Formatting.Indented));
+            }
+            catch (FileLoadException f)
+            {
+                Console.WriteLine("Hubo un problema con la dirección del archivo, error: " + f.Message);
+            }
+
+            return "";
         }
 
-        private static byte[] Decrypt(byte[] encryptedData, Aes aes)
-        {
-            return aes.CreateDecryptor()
-                .TransformFinalBlock(encryptedData, 0, encryptedData.Length);
-        }
 
-        public static Aes GetAES(String secretKey)
-        {
-            int keysize = 256;
-
-            var keyBytes = new byte[keysize / 8];
-            var secretKeyBytes = Encoding.UTF8.GetBytes(secretKey);
-            Array.Copy(secretKeyBytes, keyBytes, Math.Min(keyBytes.Length, secretKeyBytes.Length));
-
-            var aes = Aes.Create();
-            aes.Mode = CipherMode.CBC;
-            aes.Padding = PaddingMode.PKCS7;
-            aes.KeySize = keysize;
-            aes.BlockSize = 128;//AES es siempre 128 el blocksize
-            aes.Key = keyBytes;
-            aes.GenerateIV();
-
-            return aes;
-        }
 
     }
 }

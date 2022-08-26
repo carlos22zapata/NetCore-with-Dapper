@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZOmrYFGQLR7FgbiGxVONAoO0yQelN3lorF1pMlEQk9C+1qsVvEkEsA53N40EAp73k8G8nb+2SY88k5qmSsJ6zA==",
+  "dgSpecHash": "E/3Rsgp22aSU1rbMVleIP7WJsnpGiM/Fgpu5JfOae7MfbFS0QgbG6Bajqr9O3SdFT1WU6PxFpyyJyE9JypbclA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MyHP\\source\\repos\\ARIS_Net\\ARIS_Net\\ARIS_Net.csproj",
+  "projectFilePath": "C:\\Users\\MyHP\\source\\repos\\Aris_Net\\ARIS_Net\\ARIS_Net.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MyHP\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\MyHP\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
