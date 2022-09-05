@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+
+    <!-- Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/1dddd4a9de.js" crossorigin="anonymous"></script>
+    <!-- -------------------------------------------------------------------------------------------------------- -->
+
+    <!-- Styles -->
+    <link rel="stylesheet" hfref="./css/ImportFile">
+
+    
+</head>
+<body>
+
+    <div class="container">
+        <br>
+        <h4>Estructura de la tabla</h4>
+        <br>
+
+        <div class="col-12">
+            
+            <br><br>
+
+            <div class="filterDiv">
+                <div class="row col-12" >
+                
+                    <div class="col-10">
+                        <input type="text" id="txtTable" value="CTES"/>
+                        <button id="load" class="btn btn-info" style="width: 200px;">Seleccionar tabla</button>
+                    </div>
+                    <br><br>
+                    <div>
+                        <input type="text" id="txtModel" value="Prueba Modelo 1"/>
+                        <button id="load" class="btn btn-info" style="width: 200px;">Guardar como modelo</button>
+                    </div>
+                    
+                </div>
+    
+                <br>
+                
+                <div>
+                    <input type="file" id="file-input" accept=".csv,.xls,.xlsx" class="btn-info"/>
+                    <div style="display: none;">
+                        <h3>Contenido del archivo:</h3>
+                        <pre id="contenido-archivo"></pre>
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+
+            <br>
+
+            <button onclick="loadTable()" class="btn btn-info">Cargar tabla de datos</button>            
+        </div>
+    </div>
+    
+    <br><br>
+
+    <div id="tableResult" class="container col-6">
+        <table class="table bg-white table-striped table-hover table-sortable TableDes"
+                    id="CompareTableStructure" 
+                    data-toggle="table"
+                    data-flat="true"
+                    data-search="true">
+
+                    <thead class="bg-dark text-light">                        
+                        <th>Campo de la tabla</th>
+                        <th>Columna del archivo</th>                                         
+                    </thead>
+                    <tbody id="CompareTableStructureRows">                           
+                    </tbody>
+            </table>
+
+            <br>
+            <button class="btn btn-primary col-12" onclick="parseTableToJson()">Importar registros</button>
+
+            <br>
+            <pre></pre>
+    </div>
+
+    <br><br>
+
+    <script src="./js/commond.js"></script>
+    
+</body>
+</html>
