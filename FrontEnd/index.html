@@ -16,17 +16,23 @@
     <!-- -------------------------------------------------------------------------------------------------------- -->
 
     <!-- Styles -->
-    <link rel="stylesheet" hfref="./css/ImportFile">
+    <link rel="stylesheet" href="./cssStyles/ImportFile.css">
 
-    
+    <!-- Moment.JS -->
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
     <div class="container">
         <br>
-        <h4>Estructura de la tabla</h4>
-        <br>
-
+        <h4 class="TitleI">Estructura de la tabla</h4>
+        
         <div class="col-12">
             
             <br><br>
@@ -35,13 +41,20 @@
                 <div class="row col-12" >
                 
                     <div class="col-10">
-                        <input type="text" id="txtTable" value="CTES"/>
-                        <button id="load" class="btn btn-info" style="width: 200px;">Seleccionar tabla</button>
+                        <input type="text" id="txtTable" value="" class="TextBox" readonly/>&nbsp;
+                        <button id="load" class="RoundButton btn" title="Seleccionar tabla" onclick="fnTablesSearch()"><i class="fa-solid fa-magnifying-glass"></i> </button>
                     </div>
                     <br><br>
                     <div>
-                        <input type="text" id="txtModel" value="Prueba Modelo 1"/>
-                        <button id="load" class="btn btn-info" style="width: 200px;">Guardar como modelo</button>
+                        <input type="text" id="txtModel" value="" class="TextBox" readonly/> &nbsp;                        
+                        <button id="loadSearch" class=" RoundButton btn" title="Buscar plantilla" onclick="fnSearchModel()"><i class="fa-solid fa-magnifying-glass"></i> </button>
+                        <button id="loadNew" class=" RoundButton btn" title="Nueva plantilla" onclick="fnNewModel()"><i class="fa-solid fa-plus"></i> </button>
+                        <button id="loadSave" class="RoundButton btn" title="Guardar plantilla" onclick="SaveModel()" style="display: none;"><i class="fa-regular fa-floppy-disk"></i> </button>
+                        &nbsp;&nbsp;<label id="lblMarcNew" style="color: rgb(249, 133, 133); display: none;">Nueva plantilla no guardada!</label>
+                    </div>
+
+                    <div id="keyValues">
+                        <label id="lblJson" style="display: none;"></label>
                     </div>
                     
                 </div>
@@ -49,20 +62,23 @@
                 <br>
                 
                 <div>
-                    <input type="file" id="file-input" accept=".csv,.xls,.xlsx" class="btn-info"/>
-                    <div style="display: none;">
-                        <h3>Contenido del archivo:</h3>
-                        <pre id="contenido-archivo"></pre>
+                    <div class="input-file">
+                        <input type="file" id="file-input" accept=".csv,.xls,.xlsx" class="input-file-input"/> &nbsp;
+                        <label for="file-input" class="input-file-btn">Seleccionar archivo</label>
+                        <label id="lblFileSelect">No se ha seleccionado un archivo</label>
+                        <button id="lblLoad" onclick="loadTable()" class="RoundButton btn" title="Cargar tabla de datos" style="display: none;"><i class="fa-solid fa-play"></i> </button>       
+                        <div style="display: none;">
+                            <h3>Contenido del archivo:</h3>
+                            <pre id="contenido-archivo"></pre>
+                        </div>
                     </div>
+                    
+                    
                     
                 </div>
             </div>
 
-            
-
-            <br>
-
-            <button onclick="loadTable()" class="btn btn-info">Cargar tabla de datos</button>            
+                 
         </div>
     </div>
     
@@ -84,14 +100,45 @@
             </table>
 
             <br>
-            <button class="btn btn-primary col-12" onclick="parseTableToJson()">Importar registros</button>
-
+            <button class="btn input-file-btn" onclick="parseTableToJson()">Importar registros</button>
             <br>
-            <pre></pre>
+            <br>
     </div>
 
-    <br><br>
+    <!-- Modal para busqueda (inicio) -->
+    <div class="modal fade" id="ModalSearch" tabindex="-1" aria-labelledby="ModalSearch" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
+                <div class="modal-header">
+                    <label>Busqueda de registros</label>
+                    <label id="lblTypeSearch"></label>
+                </div>
+                
+                <div class="modal-body">                   
+                    <table class="table bg-white table-striped table-hover table-sortable TableDes"
+                    id="TableSearch" 
+                    data-toggle="table"
+                    data-flat="true"
+                    data-search="true">
+
+                    <thead class="bg-dark text-light">                        
+                        <th>Registros encontrados</th>                                        
+                    </thead>
+                    <tbody id="TableSearchRows">                           
+                    </tbody>
+            </table>
+                </div>
+                
+                <div class="modal-footer">
+                                        
+                </div>
+            
+            </div>
+        </div>
+    </div>
+    <!-- Modal para busqueda (fin) -->
+  
     <script src="./js/commond.js"></script>
     
 </body>

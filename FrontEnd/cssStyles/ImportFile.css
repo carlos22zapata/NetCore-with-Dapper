@@ -1,0 +1,73 @@
+
+.filterDiv{
+    background-color: #D1D5E8;
+    padding: 20px;
+    padding-left: 50px;;
+    border-radius: 20PX;
+    border: none;
+}
+
+.RoundButton{
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;   
+   background-color: #81B29A; 
+   color: aliceblue;
+}   
+
+.TitleI{
+  color: #81B29A; 
+}
+
+.TextBox{
+   border: none;
+   border-right: 30px;
+   height: 40px;
+   border-radius: 6px;
+   padding: 10px;
+}
+
+.custom-input-file {
+   background-color: #941B80;
+   color: #fff;
+   cursor: pointer;
+   font-size: 18px;
+   font-weight: bold;
+   margin: 0 auto 0;
+   min-height: 15px;
+   overflow: hidden;
+   padding: 10px;
+   position: relative;
+   text-align: center;
+   width: 400px;
+ }
+  
+.input-file-input {
+   display:none;
+ }
+    
+ .input-file-btn {
+   height: 34px;
+     padding: 8px 1px;
+     border-radius: 17px;
+     background-color: #81B29A;
+     color: white;
+     width: 170px;
+     text-align: center;
+     line-height: 22px;
+     cursor: pointer;
+     height: 40px;
+ }
+ 
+ .input-file-btn:hover {
+     color: black;
+ }
+ 
+ .input-file-btn:active {
+     -webkit-box-shadow: 0 3px 5px var(--color-shadow-btn-active) inset;
+     box-shadow: 0 3px 5px var(--color-shadow-btn-active) inset;
+ }
+
+ .TableDes td{
+  cursor: pointer;
+ }
