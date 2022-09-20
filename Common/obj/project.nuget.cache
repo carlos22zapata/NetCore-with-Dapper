@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "qGuuHbMfxvC/LR9lwBlcOtn/pgINapCP8GSID9EkIcIQ2fsl9mRidHrIV+EKpb77w5TPrdF8yiWdJnoshky9Hw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\MyHP\\source\\repos\\Aris_Net\\Common\\Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\MyHP\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
+    "C:\\Users\\MyHP\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\MyHP\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\MyHP\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
